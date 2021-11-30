@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans>
+    <bean id="userDao" class="test.dao.UserDao"></bean>
+    <bean id="userService" class="test.service.UserService">
+        <!--name指的是set方法里的名字，ref指的是bean的id-->
+        <property name="userDao" ref="userDao"/>
+    </bean>
+</beans>
